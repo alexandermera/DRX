@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  metadata-complete="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+<!--<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">-->
+  <display-name>Approach</display-name>
+  <welcome-file-list>
+    <welcome-file>fingerprint.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>  
+        <description>  
+            Display Tag Example www.javaworkspace.com  
+        </description>  
+        <display-name>Controller</display-name>  
+        <servlet-name>Controller</servlet-name>  
+        <servlet-class>  
+            com.javaworkspace.displaytag.controller.Controller  
+        </servlet-class>  
+    </servlet> 
+  <context-param>
+    <param-name>DIR_INCLUDES</param-name>
+    <param-value>/Approach/includes/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DIR_FILES</param-name>
+    <param-value>/Users/AlexanderMera/Dropbox/Approach/WebContent/dataset/</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DIR_FILES_temp</param-name>
+    <param-value>/var/lib/tomcat8/webapps/Approach/dataset/</param-value>
+  </context-param>
+	<servlet>
+	    <servlet-name>ClusteringServlet</servlet-name>
+	    <servlet-class>control.ClusteringServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ClusteringServlet</servlet-name>
+	    <url-pattern>/ClusteringServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>FingerPrintServlet</servlet-name>
+	    <servlet-class>control.FingerPrintServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>FingerPrintServlet</servlet-name>
+	    <url-pattern>/FingerPrintServlet</url-pattern>
+	</servlet-mapping>  
+</web-app>
